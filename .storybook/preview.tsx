@@ -1,5 +1,7 @@
 import type { Preview } from '@storybook/nextjs-vite'
 import '../app/globals.css'
+import { TooltipProvider } from '../app/components/ui/tooltip/tooltip'
+import React from 'react'
 
 const preview: Preview = {
   parameters: {
@@ -17,6 +19,13 @@ const preview: Preview = {
       test: 'todo'
     }
   },
+  decorators: [
+    (Story) => (
+      <TooltipProvider delayDuration={300}>
+        <Story />
+      </TooltipProvider>
+    ),
+  ],
 };
 
 export default preview;
