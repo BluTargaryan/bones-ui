@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react"
 import { Settings, Trash2, Info, Copy } from "lucide-react"
 import { Tooltip } from "./tooltip"
 import { Button } from "@/app/components/ui/button"
-// import { Badge }  from "@/components/ui/badge"  // coming soon — stub if needed
+import { Badge }  from "@/app/components/ui/badge/badge"  // coming soon — stub if needed
 
 const meta: Meta<typeof Tooltip> = {
   title: "UI/Tooltip",
