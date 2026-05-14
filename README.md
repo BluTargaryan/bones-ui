@@ -112,7 +112,7 @@ export function Example() {
 
 ## Storybook
 
-[bones-ui.github.io/bones-ui](https://yourusername.github.io/bones-ui)
+[blutargaryan.github.io/bones-ui](https://blutargaryan.github.io/bones-ui)
 
 ## License
 

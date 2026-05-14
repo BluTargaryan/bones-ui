@@ -4,13 +4,13 @@
   "description": "A minimal, composable React design system built on Radix UI and CVA. White background. 1.5px border. Yours to extend.",
   "author": "Peace Akoja <peaceakoja00@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/peaceakoja/bones-ui",
+  "homepage": "https://github.com/BluTargaryan/bones-ui",
   "repository": {
     "type": "git",
-    "url": "https://github.com/peaceakoja/bones-ui.git"
+    "url": "https://github.com/BluTargaryan/bones-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/peaceakoja/bones-ui/issues"
+    "url": "https://github.com/BluTargaryan/bones-ui/issues"
   },
   "keywords": [
     "react",
