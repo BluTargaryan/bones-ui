@@ -76,16 +76,23 @@
     "tailwind-merge": "latest"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^5.2.1",
+    "@storybook/addon-a11y": "^10.4.0",
+    "@storybook/addon-docs": "^10.4.0",
+    "@storybook/addon-vitest": "^10.4.0",
     "@storybook/nextjs-vite": "^10.4.0",
     "@storybook/react": "latest",
+    "@tailwindcss/postcss": "^4.3.0",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
     "next": "latest",
     "postcss": "latest",
+    "storybook": "^10.4.0",
     "tailwindcss": "latest",
     "tsup": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "vite": "^8.0.13"
   }
 }
