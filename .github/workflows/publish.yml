@@ -6,7 +6,7 @@ on:
       - "v*"           # triggers on v0.1.0, v1.0.0, etc.
 
 jobs:
-  # ── Run on every push to master or main too ──────────────────────────────────
+  # ── Build & type-check ──────────────────────────────────────────────────────
   test:
     name: Build & type-check
     runs-on: ubuntu-latest

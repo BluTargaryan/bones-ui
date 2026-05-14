@@ -76,7 +76,7 @@
     "tailwind-merge": "latest"
   },
   "devDependencies": {
-    "@storybook/nextjs": "latest",
+    "@storybook/nextjs-vite": "^10.4.0",
     "@storybook/react": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
