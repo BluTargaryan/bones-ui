@@ -9,7 +9,7 @@ import { cn } from "@/app/lib/utils"
 const shimmerClass = [
   "animate-shimmer",
   "bg-[length:800px_100%]",
-  "bg-[linear-gradient(90deg,#f3f4f6_0px,#e9eaec_40px,#f3f4f6_80px)]",
+  "bg-[linear-gradient(90deg,#e5e7eb_0px,#f9fafb_40px,#e5e7eb_80px)]",
 ].join(" ")
 
 // ─── Primitive ────────────────────────────────────────────────────────────────
