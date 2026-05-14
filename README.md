@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BonesUI
 
-## Getting Started
+A minimal, composable React design system built on [Radix UI](https://radix-ui.com) primitives
+and [CVA](https://cva.style). White background. 1.5px border. Yours to extend.
 
-First, run the development server:
+## Install
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`bash
+npm install bones-ui
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Peer dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+\`\`\`bash
+npm install tailwindcss react react-dom
+\`\`\`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tailwind setup
 
-## Learn More
+Add the BonesUI source to your `tailwind.config.ts` content paths
+so Tailwind includes the component classes:
 
-To learn more about Next.js, take a look at the following resources:
+\`\`\`ts
+// tailwind.config.ts
+export default {
+  content: [
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./node_modules/bones-ui/dist/**/*.{js,mjs}",  // ← add this
+  ],
+}
+\`\`\`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Add the shimmer animation:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+\`\`\`ts
+theme: {
+  extend: {
+    keyframes: {
+      shimmer: {
+        "0%":   { backgroundPosition: "-400px 0" },
+        "100%": { backgroundPosition: "400px 0"  },
+      },
+    },
+    animation: {
+      shimmer: "shimmer 1.4s ease-in-out infinite",
+    },
+  },
+},
+\`\`\`
 
-## Deploy on Vercel
+## Provider setup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Wrap your app once:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+\`\`\`tsx
+import { TooltipProvider } from "bones-ui"
+import { ToastProvider }   from "bones-ui"
+
+export default function RootLayout({ children }) {
+  return (
+    <TooltipProvider>
+      <ToastProvider position="bottom-right">
+        {children}
+      </ToastProvider>
+    </TooltipProvider>
+  )
+}
+\`\`\`
+
+## Usage
+
+\`\`\`tsx
+import { Button, Badge, Card, CardHeader, CardTitle, CardBody } from "bones-ui"
+
+export function Example() {
+  return (
+    <Card className="w-80">
+      <CardHeader>
+        <CardTitle>Hello</CardTitle>
+      </CardHeader>
+      <CardBody className="flex gap-2">
+        <Button>Primary</Button>
+        <Badge variant="success" dot>Live</Badge>
+      </CardBody>
+    </Card>
+  )
+}
+\`\`\`
+
+## Components
+
+| Component   | Description                                     |
+|-------------|-------------------------------------------------|
+| Button      | 5 variants, loading, error, icon slots          |
+| Input       | Label, helper text, prefix/suffix, error        |
+| Select      | Grouped options, searchable, all states         |
+| Modal       | Compound slots, sizes, focus trap               |
+| Tooltip     | 3 variants, sides, disabled trigger support     |
+| Badge       | 7 variants, dot, icon, dismissible              |
+| Tabs        | Underline / pills / boxed, adornments           |
+| Dropdown    | Groups, checkboxes, radio, submenus, shortcuts  |
+| Toggle      | Single + ToggleGroup, single/multi select       |
+| Combobox    | Search, single/multi, grouped, async-ready      |
+| Toast       | 5 variants, actions, loading, imperative hook   |
+| Skeleton    | Primitives + Text, Avatar, Card, Table, Button  |
+| Avatar      | Image→initials→icon cascade, status, group     |
+| Card        | Compound slots, interactive, image, disabled    |
+| DataTable   | Sort, select, search, pagination, row actions   |
+| Checkbox    | Checked, indeterminate, disabled, controlled    |
+
+
+## Storybook
+
+[bones-ui.github.io/bones-ui](https://yourusername.github.io/bones-ui)
+
+## License
+
+MIT

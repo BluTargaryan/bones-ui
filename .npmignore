@@ -1,0 +1,28 @@
+# Source
+components/
+app/
+lib/
+styles/
+public/
+.storybook/
+
+# Config
+*.config.*
+tsconfig*.json
+.eslintrc*
+.prettierrc*
+next.config.*
+postcss.config.*
+
+# Dev
+node_modules/
+.next/
+storybook-static/
+.env*
+*.stories.*
+*.test.*
+
+# Git
+.git/
+.github/
+.gitignore

@@ -1,55 +1,89 @@
 {
-  "name": "bones-ui",
+  "name": "@peaceakoja/bones-ui",
   "version": "0.1.0",
-  "private": true,
+  "description": "A minimal, composable React design system built on Radix UI and CVA. White background. 1.5px border. Yours to extend.",
+  "author": "Peace Akoja <peaceakoja00@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/peaceakoja/bones-ui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peaceakoja/bones-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/peaceakoja/bones-ui/issues"
+  },
+  "keywords": [
+    "react",
+    "component-library",
+    "design-system",
+    "radix-ui",
+    "tailwindcss",
+    "cva",
+    "typescript",
+    "accessible"
+  ],
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types":   "./dist/index.d.ts",
+      "import":  "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint",
+    "dev":       "next dev",
+    "build:app": "next build",
+    "build:lib": "tsup",
+    "build":     "npm run build:lib",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepublishOnly": "npm run build:lib",
+    "release": "npm run build:lib && npm publish"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "tailwindcss": ">=3"
+  },
+  "peerDependenciesMeta": {
+    "tailwindcss": { "optional": false }
   },
   "dependencies": {
-    "@radix-ui/react-avatar": "^1.1.11",
-    "@radix-ui/react-dialog": "^1.1.15",
-    "@radix-ui/react-dropdown-menu": "^2.1.16",
-    "@radix-ui/react-popover": "^1.1.15",
-    "@radix-ui/react-select": "^2.2.6",
-    "@radix-ui/react-slot": "^1.2.4",
-    "@radix-ui/react-tabs": "^1.1.13",
-    "@radix-ui/react-toast": "^1.2.15",
-    "@radix-ui/react-toggle": "^1.1.10",
-    "@radix-ui/react-toggle-group": "^1.1.11",
-    "@radix-ui/react-tooltip": "^1.2.8",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "lucide-react": "^1.14.0",
-    "next": "16.2.6",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "tailwind-merge": "^3.6.0"
+    "@radix-ui/react-avatar":        "latest",
+    "@radix-ui/react-dialog":        "latest",
+    "@radix-ui/react-dropdown-menu": "latest",
+    "@radix-ui/react-popover":       "latest",
+    "@radix-ui/react-select":        "latest",
+    "@radix-ui/react-slot":          "latest",
+    "@radix-ui/react-tabs":          "latest",
+    "@radix-ui/react-toast":         "latest",
+    "@radix-ui/react-toggle":        "latest",
+    "@radix-ui/react-toggle-group":  "latest",
+    "@radix-ui/react-tooltip":       "latest",
+    "class-variance-authority":      "latest",
+    "clsx":                          "latest",
+    "lucide-react":                  "latest",
+    "tailwind-merge":                "latest"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^5.1.2",
-    "@storybook/addon-a11y": "^10.3.6",
-    "@storybook/addon-docs": "^10.3.6",
-    "@storybook/addon-vitest": "^10.3.6",
-    "@storybook/nextjs-vite": "^10.3.6",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@vitest/browser-playwright": "^4.1.6",
-    "@vitest/coverage-v8": "^4.1.6",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.6",
-    "eslint-plugin-storybook": "^10.3.6",
-    "playwright": "^1.60.0",
-    "storybook": "^10.3.6",
-    "tailwindcss": "^4",
-    "typescript": "^5",
-    "vite": "^8.0.12",
-    "vitest": "^4.1.6"
+    "@storybook/nextjs":   "latest",
+    "@storybook/react":    "latest",
+    "@types/node":         "latest",
+    "@types/react":        "latest",
+    "@types/react-dom":    "latest",
+    "autoprefixer":        "latest",
+    "next":                "latest",
+    "postcss":             "latest",
+    "tailwindcss":         "latest",
+    "tsup":                "latest",
+    "typescript":          "latest"
   }
 }

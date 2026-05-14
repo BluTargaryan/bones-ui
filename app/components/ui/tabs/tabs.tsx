@@ -17,10 +17,7 @@ export interface TabItem {
 }
 
 export interface TabsProps
-  extends Omit
-    <React.ComponentPropsWithoutRef<typeof TabsPrimitive.Root>,
-    "children"
-  > {
+  extends Omit<React.ComponentPropsWithoutRef<typeof TabsPrimitive.Root>, "children"> {
   items: TabItem[]
   variant?: TabsVariant
   /** Stretches tabs to fill the full list width */
