@@ -5,22 +5,22 @@ and [CVA](https://cva.style). White background. 1.5px border. Yours to extend.
 
 ## Install
 
-\`\`\`bash
+```bash
 npm install bones-ui
-\`\`\`
+```
 
 ## Peer dependencies
 
-\`\`\`bash
+```bash
 npm install tailwindcss react react-dom
-\`\`\`
+```
 
 ## Tailwind setup
 
 Add the BonesUI source to your `tailwind.config.ts` content paths
 so Tailwind includes the component classes:
 
-\`\`\`ts
+```ts
 // tailwind.config.ts
 export default {
   content: [
@@ -29,11 +29,11 @@ export default {
     "./node_modules/bones-ui/dist/**/*.{js,mjs}",  // ← add this
   ],
 }
-\`\`\`
+```
 
 Add the shimmer animation:
 
-\`\`\`ts
+```ts
 theme: {
   extend: {
     keyframes: {
@@ -47,13 +47,13 @@ theme: {
     },
   },
 },
-\`\`\`
+```
 
 ## Provider setup
 
 Wrap your app once:
 
-\`\`\`tsx
+```tsx
 import { TooltipProvider } from "bones-ui"
 import { ToastProvider }   from "bones-ui"
 
@@ -66,11 +66,11 @@ export default function RootLayout({ children }) {
     </TooltipProvider>
   )
 }
-\`\`\`
+```
 
 ## Usage
 
-\`\`\`tsx
+```tsx
 import { Button, Badge, Card, CardHeader, CardTitle, CardBody } from "bones-ui"
 
 export function Example() {
@@ -86,7 +86,7 @@ export function Example() {
     </Card>
   )
 }
-\`\`\`
+```
 
 ## Components
 
