@@ -1,6 +1,6 @@
 {
   "name": "@peaceakoja/bones-ui",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A minimal, composable React design system built on Radix UI and CVA. White background. 1.5px border. Yours to extend.",
   "author": "Peace Akoja <peaceakoja00@gmail.com>",
   "license": "MIT",
