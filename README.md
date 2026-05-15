@@ -6,7 +6,7 @@ and [CVA](https://cva.style). White background. 1.5px border. Yours to extend.
 ## Install
 
 ```bash
-npm install bones-ui
+npm install @peaceakoja/bones-ui
 ```
 
 ## Peer dependencies
